@@ -8,7 +8,7 @@ TEST_MODE="down"
 NAME="down_80_all"
 SCALE=4
 CROP=130
-TEST_LR="/media/ml/Data Disk/CapsNetwork/Unsupervised/DATASET/Test/HR"
+TEST_LR="PATH TO DATA"
 GPU="cuda:0"
 SR_MODEL="gan"
 TRAINING_TYPE="gan"
@@ -20,9 +20,9 @@ python predict.py \
   --test_mode $TEST_MODE \
   --name $NAME \
   --scale $SCALE \
-  --resume_down "/media/ml/Data Disk/CapsNetwork/Unsupervised/MDA-SR-GAN/experiment/qkv_fusion_block/models/model_down_0080.pth" \
+  --resume_down "PATH TO DOWNSAMPLING MODEL" \
   --patch_size_down 512 \
-  --test_lr "/media/ml/Data Disk/CapsNetwork/Unsupervised/DATASET/Conventional/Train/Cropped_HR" \
+  --test_lr "PATH TO LR" \
   --gpu $GPU \
   --sr_model $SR_MODEL \
   --training_type $TRAINING_TYPE \
