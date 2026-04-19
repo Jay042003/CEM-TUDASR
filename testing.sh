@@ -5,10 +5,10 @@ export CUDA_VISIBLE_DEVICES=0
 
 # Define the parameters
 TEST_MODE="sr_patch"
-NAME="ablation_equal_loss"
+NAME="NAME OF THE TEST FOLDER"
 SCALE=4
 CROP=130
-TEST_LR="/media/ml/Data Disk/CapsNetwork/Unsupervised/DATASET/Test/HR"
+TEST_LR="PATH TO DATA"
 GPU="cuda:0"
 SR_MODEL="gan"
 TRAINING_TYPE="gan"
@@ -20,9 +20,9 @@ python predict.py \
   --test_mode $TEST_MODE \
   --name $NAME \
   --scale $SCALE \
-  --pretrain_sr "/media/ml/Data Disk/CapsNetwork/Unsupervised/CEM-TUDASR/experiment/ablation_equal_loss/models/best_sr_model.pth" \
+  --pretrain_sr "PATH TO TRAINED MODEL" \
   --crop $CROP \
-  --test_lr "/media/ml/Data Disk/CapsNetwork/Unsupervised/DATASET/Test/HR" \
+  --test_lr "PATH TO DATA" \
   --gpu $GPU \
   --sr_model $SR_MODEL \
   --training_type $TRAINING_TYPE \
